@@ -4,27 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Roboto+Mono:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
   </head>
   <body>
     <div id="main">
-      <h2>Nijat NotePad</h2>
-      <input type="text" id="titleInput" placeholder="Note Title" />
-      <textarea id="noteInput" placeholder="Write note..."></textarea>
-      <div id="colors">
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
+      <h2>Nijat <span>Note</span>Pad</h2>
+      <input
+        type="text"
+        id="titleInput"
+        maxlength="22"
+        placeholder="Note Title"
+      />
+      <textarea id="noteInput" rows="8" placeholder="Write note..."></textarea>
+      <div class="selectcolor">
+        <div id="colors">
+          <div class="color" id="red"></div>
+          <div class="color" id="purple"></div>
+          <div class="color" id="blue"></div>
+          <div class="color" id="yellow"></div>
+          <div class="color" id="green"></div>
+        </div>
         <button id="save">Save ✓</button>
       </div>
       <div id="cards">
         <div class="card">
           <div>
-            <h3>Add a title to your note</h3>
+            <h4>Add a title to your note</h4>
             <img src="./Image/trash-icon.svg" alt="Trash Icon" />
           </div>
 
