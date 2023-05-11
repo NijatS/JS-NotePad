@@ -54,6 +54,10 @@ body {
   font-weight: 500;
   color: white;
   transition: all 0.2s ease 0s;
+  cursor: pointer;
+}
+#main .selectcolor button:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 20px 5px, rgba(0, 0, 0, 0.3) 0px 5px 10px 2px;
 }
 #main .selectcolor #colors {
   display: flex;
@@ -71,6 +75,13 @@ body {
   justify-content: center;
   background-color: rgb(240, 98, 146);
 }
+#main .selectcolor #colors .color:first-child > span {
+  display: none;
+}
+#main .selectcolor #colors .color:first-child:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
 #main .selectcolor #colors .color:nth-child(2) {
   box-sizing: initial;
   width: 40px;
@@ -83,6 +94,13 @@ body {
   align-items: center;
   justify-content: center;
   background-color: rgb(186, 104, 200);
+}
+#main .selectcolor #colors .color:nth-child(2) > span {
+  display: none;
+}
+#main .selectcolor #colors .color:nth-child(2):hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
 }
 #main .selectcolor #colors .color:nth-child(3) {
   box-sizing: initial;
@@ -97,6 +115,13 @@ body {
   justify-content: center;
   background-color: rgb(79, 195, 247);
 }
+#main .selectcolor #colors .color:nth-child(3) > span {
+  display: none;
+}
+#main .selectcolor #colors .color:nth-child(3):hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
 #main .selectcolor #colors .color:nth-child(4) {
   box-sizing: initial;
   width: 40px;
@@ -110,6 +135,13 @@ body {
   justify-content: center;
   background-color: rgb(255, 213, 79);
 }
+#main .selectcolor #colors .color:nth-child(4) > span {
+  display: none;
+}
+#main .selectcolor #colors .color:nth-child(4):hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
 #main .selectcolor #colors .color:last-child {
   box-sizing: initial;
   width: 40px;
@@ -122,6 +154,13 @@ body {
   align-items: center;
   justify-content: center;
   background-color: rgb(174, 213, 129);
+}
+#main .selectcolor #colors .color:last-child > span {
+  display: none;
+}
+#main .selectcolor #colors .color:last-child:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
 }
 #main #cards {
   width: 70%;
