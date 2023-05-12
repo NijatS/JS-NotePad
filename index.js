@@ -7,35 +7,53 @@ const yellowColor = document.querySelector("#yellow");
 const greenColor = document.querySelector("#green");
 const saveButton = document.querySelector("#save");
 
-const cards = document.querySelector("#cards");
-const body = document.body;
+const defaultCard = document.querySelector("#default");
+const defaultTrash = defaultCard.querySelector("img");
+
+let style;
+let selectedColor;
 
 let color = [redColor, purpleColor, blueColor, yellowColor, greenColor];
-let selectedColor;
+
 redColor.addEventListener("click", () => {
   Blur(color);
   Click(redColor);
-  selectedColor = redColor;
-  body.style.backgroundColor = String(selectedColor.style.backgroundColor);
+  style = getComputedStyle(redColor);
+  selectedColor = style.backgroundColor;
 });
 purpleColor.addEventListener("click", () => {
   Blur(color);
   Click(purpleColor);
-  selectedColor = purpleColor.style.backgroundColor;
+  style = getComputedStyle(purpleColor);
+  selectedColor = style.backgroundColor;
 });
 blueColor.addEventListener("click", () => {
   Blur(color);
   Click(blueColor);
+  style = getComputedStyle(blueColor);
+  selectedColor = style.backgroundColor;
 });
 yellowColor.addEventListener("click", () => {
   Blur(color);
   Click(yellowColor);
+  style = getComputedStyle(yellowColor);
+  selectedColor = style.backgroundColor;
 });
 greenColor.addEventListener("click", () => {
   Blur(color);
   Click(greenColor);
+  style = getComputedStyle(greenColor);
+  selectedColor = style.backgroundColor;
 });
 saveButton.addEventListener("click", () => {
+  if (!titleInput.value.trim() || !noteInput.value.trim()) {
+    alert("Please write note title");
+    return;
+  }
+  if (!selectedColor) {
+    alert("Please select color");
+    return;
+  }
   let title = titleInput.value.trim();
   let text = noteInput.value.trim();
   const newCard = document.createElement("div");
@@ -48,11 +66,24 @@ saveButton.addEventListener("click", () => {
            ${text}
           </p>
   `;
+  const cardDiv = newCard.getElementsByTagName("div")[0];
   newCard.style.borderColor = selectedColor;
+  cardDiv.style.backgroundColor = selectedColor;
   newCard.className = "card";
   cards.append(newCard);
+  Blur(color);
+  titleInput.value = "";
+  noteInput.value = "";
+  selectedColor = "";
+  const trash = newCard.querySelector("img");
+  trash.addEventListener("click", () => {
+    newCard.remove();
+  });
 });
 
+defaultTrash.addEventListener("click", () => {
+  defaultCard.remove();
+});
 function Click(body) {
   body.textContent = "✓";
 }

@@ -30,6 +30,26 @@ body {
   outline-color: rgb(81, 45, 168);
   border-radius: 7px;
 }
+@media screen and (max-width: 1400px) {
+  #main input {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #main input {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 850px) {
+  #main input {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main input {
+    width: 90%;
+  }
+}
 #main textarea {
   margin-top: 25px;
   box-sizing: initial;
@@ -39,11 +59,51 @@ body {
   outline-color: rgb(81, 45, 168);
   border-radius: 7px;
 }
+@media screen and (max-width: 1400px) {
+  #main textarea {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #main textarea {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 850px) {
+  #main textarea {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main textarea {
+    width: 90%;
+  }
+}
 #main .selectcolor {
   width: 30%;
   margin: 10px auto;
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 1400px) {
+  #main .selectcolor {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #main .selectcolor {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 850px) {
+  #main .selectcolor {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main .selectcolor {
+    width: 90%;
+  }
 }
 #main .selectcolor button {
   padding: 10px 15px;
@@ -55,6 +115,7 @@ body {
   color: white;
   transition: all 0.2s ease 0s;
   cursor: pointer;
+  box-sizing: border-box;
 }
 #main .selectcolor button:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 20px 5px, rgba(0, 0, 0, 0.3) 0px 5px 10px 2px;
@@ -82,6 +143,14 @@ body {
   opacity: 0.8;
   transform: translateY(-1px);
 }
+@media only screen and (max-width: 500px) {
+  #main .selectcolor #colors .color:first-child {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transform: translateY(3px);
+  }
+}
 #main .selectcolor #colors .color:nth-child(2) {
   box-sizing: initial;
   width: 40px;
@@ -101,6 +170,14 @@ body {
 #main .selectcolor #colors .color:nth-child(2):hover {
   opacity: 0.8;
   transform: translateY(-1px);
+}
+@media only screen and (max-width: 500px) {
+  #main .selectcolor #colors .color:nth-child(2) {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transform: translateY(3px);
+  }
 }
 #main .selectcolor #colors .color:nth-child(3) {
   box-sizing: initial;
@@ -122,6 +199,14 @@ body {
   opacity: 0.8;
   transform: translateY(-1px);
 }
+@media only screen and (max-width: 500px) {
+  #main .selectcolor #colors .color:nth-child(3) {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transform: translateY(3px);
+  }
+}
 #main .selectcolor #colors .color:nth-child(4) {
   box-sizing: initial;
   width: 40px;
@@ -141,6 +226,14 @@ body {
 #main .selectcolor #colors .color:nth-child(4):hover {
   opacity: 0.8;
   transform: translateY(-1px);
+}
+@media only screen and (max-width: 500px) {
+  #main .selectcolor #colors .color:nth-child(4) {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transform: translateY(3px);
+  }
 }
 #main .selectcolor #colors .color:last-child {
   box-sizing: initial;
@@ -162,6 +255,14 @@ body {
   opacity: 0.8;
   transform: translateY(-1px);
 }
+@media only screen and (max-width: 500px) {
+  #main .selectcolor #colors .color:last-child {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transform: translateY(3px);
+  }
+}
 #main #cards {
   width: 70%;
   height: -moz-fit-content;
@@ -170,6 +271,26 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+@media screen and (max-width: 1400px) {
+  #main #cards {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #main #cards {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 850px) {
+  #main #cards {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main #cards {
+    width: 90%;
+  }
 }
 #main #cards .card {
   width: 300px;
