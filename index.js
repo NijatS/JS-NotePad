@@ -67,8 +67,10 @@ saveButton.addEventListener("click", () => {
           </p>
   `;
   const cardDiv = newCard.getElementsByTagName("div")[0];
+  selectedColor.opacity = "0.4";
   newCard.style.borderColor = selectedColor;
   cardDiv.style.backgroundColor = selectedColor;
+  cardDiv.style.backgroundColor.opacity = "0.4";
   newCard.className = "card";
   cards.append(newCard);
   Blur(color);
