@@ -263,6 +263,47 @@ body {
     transform: translateY(3px);
   }
 }
+#main #search {
+  position: relative;
+  width: 32%;
+  margin: 20px auto 5px;
+}
+#main #search input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid rgb(126, 87, 194);
+  outline-color: rgb(81, 45, 168);
+  border-radius: 7px;
+}
+#main #search img {
+  position: absolute;
+  right: 12px;
+  font-size: 22px;
+  top: 7px;
+  height: 1em;
+  width: 1em;
+}
+@media only screen and (max-width: 1400px) {
+  #main #search {
+    width: 42%;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  #main #search {
+    width: 52%;
+  }
+}
+@media only screen and (max-width: 850px) {
+  #main #search {
+    width: 72%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #main #search {
+    width: 90%;
+  }
+}
 #main #cards {
   width: 70%;
   height: -moz-fit-content;
