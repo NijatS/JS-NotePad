@@ -104,8 +104,8 @@ function Search() {
     const text = card.children[1].textContent.trim().toLowerCase();
     const title = card.children[0].children[0].textContent.trim().toLowerCase();
     if (
-      text.startsWith(searchInput.value.trim()) ||
-      title.startsWith(searchInput.value.trim())
+      text.startsWith(searchInput.value.trim().toLowerCase()) ||
+      title.startsWith(searchInput.value.trim().toLowerCase())
     ) {
     } else {
       matchedCard.push(card);

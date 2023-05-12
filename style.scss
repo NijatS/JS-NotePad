@@ -2,6 +2,7 @@
   box-sizing: initial;
   width: 30%;
   padding: 10px;
+  resize: none;
   border: 1px solid rgb(126, 87, 194);
   outline-color: rgb(81, 45, 168);
   border-radius: 7px;
@@ -52,244 +53,289 @@
 body {
   font-family: Roboto Mono, monospace;
   background-color: #ede7f6;
+  height: 100vh;
 }
-#main {
+.root {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  h2 {
-    font-size: 1.5em;
-    margin: 20px 0;
-    font-weight: bold;
-    span {
-      color: rgb(126, 87, 194);
-    }
-  }
-  input {
-    @include inputStyle;
-  }
-  textarea {
-    margin-top: 25px;
-    @include inputStyle;
-  }
-  .selectcolor {
-    width: 30%;
-    margin: 10px auto;
+  height: 100%;
+
+  #main {
     display: flex;
-    justify-content: space-between;
-    @media screen and (max-width: 1400px) {
-      width: 40%;
-    }
-    @media screen and (max-width: 1100px) {
-      width: 50%;
-    }
-    @media screen and (max-width: 850px) {
-      width: 70%;
-    }
-    @media screen and (max-width: 600px) {
-      width: 90%;
-    }
-    button {
-      padding: 10px 15px;
-      background-color: rgb(126, 87, 194);
-      border-radius: 10px;
-      border: 1px;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-      font-weight: 500;
-      color: white;
-      transition: all 0.2s ease 0s;
-      cursor: pointer;
-      box-sizing: border-box;
-      &:hover {
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 20px 5px,
-          rgba(0, 0, 0, 0.3) 0px 5px 10px 2px;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      font-size: 1.5em;
+      margin: 20px 0;
+      font-weight: bold;
+      span {
+        color: rgb(126, 87, 194);
       }
     }
-    #colors {
-      display: flex;
-      .color {
-        &:first-child {
-          @include colors(rgba(240, 98, 146, 1));
-        }
-        &:nth-child(2) {
-          @include colors(rgba(186, 104, 200, 1));
-        }
-        &:nth-child(3) {
-          @include colors(rgba(79, 195, 247, 1));
-        }
-        &:nth-child(4) {
-          @include colors(rgba(255, 213, 79, 1));
-        }
-        &:last-child {
-          @include colors(rgba(174, 213, 129, 1));
-        }
-      }
-    }
-  }
-  #search {
-    position: relative;
-    width: 32%;
-    margin: 20px auto 5px;
     input {
-      width: 100%;
-      padding: 10px;
-      box-sizing: border-box;
-      border: 1px solid rgb(126, 87, 194);
-      outline-color: rgb(81, 45, 168);
-      border-radius: 7px;
+      @include inputStyle;
     }
-    img {
-      position: absolute;
-      right: 12px;
-      font-size: 22px;
-      top: 7px;
-      height: 1em;
-      width: 1em;
+    textarea {
+      margin-top: 25px;
+      @include inputStyle;
     }
-    @media only screen and (max-width: 1400px) {
-      width: 42%;
-    }
-    @media only screen and (max-width: 1100px) {
-      width: 52%;
-    }
-    @media only screen and (max-width: 850px) {
-      width: 72%;
-    }
-    @media only screen and (max-width: 600px) {
-      width: 90%;
-    }
-  }
-  #cards {
-    width: 70%;
-    height: fit-content;
-    margin: 20px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    @media screen and (max-width: 1400px) {
-      width: 75%;
-    }
-    @media screen and (max-width: 1100px) {
-      width: 80%;
-    }
-    @media screen and (max-width: 850px) {
-      width: 85%;
-    }
-    @media screen and (max-width: 600px) {
-      width: 90%;
-    }
-    .card {
-      width: 300px;
-      height: 350px;
-      display: inline-block;
-      border-radius: 15px;
-      border: 2px dashed rgb(240, 98, 146);
-      margin: 20px 20px 10px;
-      div {
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        background-color: rgba(240, 98, 146, 0.4);
-        text-align: left;
-        padding: 10px;
-        position: relative;
-        img {
-          cursor: pointer;
-          font-size: 20px;
-          position: absolute;
-          right: 10px;
-          top: 11px;
-          width: 20px;
-          height: 20px;
-        }
+    .selectcolor {
+      width: 30%;
+      margin: 10px auto;
+      display: flex;
+      justify-content: space-between;
+      @media screen and (max-width: 1400px) {
+        width: 40%;
       }
-      p {
-        padding: 10px;
-        height: 76%;
-        overflow: auto;
-        font-size: 14px;
+      @media screen and (max-width: 1100px) {
+        width: 50%;
       }
-    }
-  }
-}
-footer {
-  width: 100%;
-  background-color: rgb(216, 181, 228);
-  padding: 5px 0px 50px;
-  margin-top: auto;
-  .links {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-    text-align: center;
-    @media screen and (max-width: 1400px) {
-      width: 60%;
-    }
-    @media screen and (max-width: 1100px) {
-      width: 70%;
-      margin-top: 30px;
-    }
-    @media screen and (max-width: 800px) {
-      width: 80%;
-      margin-top: 20px;
-    }
-    @media screen and (max-width: 600px) {
-      width: 90%;
-      margin-top: 15px;
-    }
-    a {
-      text-decoration: none;
-      color: black;
-      img {
-        background-color: #fff;
-        border-radius: 50%;
-        box-shadow: 0 2px 4px 0 hsla(0, 0%, 100%, 0.82), 0 2px 16px 0 #fff;
-        color: rgba(0, 0, 0, 0.8);
-        font-size: 40px;
-        margin: 10px;
-        padding: 5px;
-        transition: 0.2s color, box-shadow 1s;
-        height: 1em;
-        width: 1em;
-        box-sizing: initial;
-        @media only screen and (max-width: 800px) {
-          margin: 5px;
-        }
-        @media only screen and (max-width: 600px) {
-          font-size: 35px;
-          margin: 4px;
-        }
-        @media only screen and (max-width: 400px) {
-          font-size: 32px;
-          margin: 3px;
-        }
-        &:hover {
-          opacity: 1;
-          box-shadow: hsla(0, 0%, 100%, 0.82) 0px 22px 70px 4px;
-        }
-      }
-    }
-  }
-  .signature {
-    a {
-      display: block;
-      font-size: 1.4rem;
-      margin-top: 15px;
-      color: rgba(0, 0, 0, 0.4);
-      text-decoration: none;
-      transition: all 0.2s ease 0s;
-      padding: 5px;
-      text-align: center;
-      @media screen and (max-width: 800px) {
-        margin-top: 10px;
-        font-size: 1.3rem;
+      @media screen and (max-width: 850px) {
+        width: 70%;
       }
       @media screen and (max-width: 600px) {
-        font-size: 1.1rem;
+        width: 90%;
       }
-      span {
-        font-size: 1rem;
+      button {
+        padding: 10px 15px;
+        background-color: rgb(126, 87, 194);
+        border-radius: 10px;
+        border: 1px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        font-weight: 500;
+        color: white;
+        transition: all 0.2s ease 0s;
+        cursor: pointer;
+        box-sizing: border-box;
+        &:hover {
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 20px 5px,
+            rgba(0, 0, 0, 0.3) 0px 5px 10px 2px;
+        }
+      }
+      #colors {
+        display: flex;
+        .color {
+          &:first-child {
+            @include colors(rgba(240, 98, 146, 1));
+          }
+          &:nth-child(2) {
+            @include colors(rgba(186, 104, 200, 1));
+          }
+          &:nth-child(3) {
+            @include colors(rgba(79, 195, 247, 1));
+          }
+          &:nth-child(4) {
+            @include colors(rgba(255, 213, 79, 1));
+          }
+          &:last-child {
+            @include colors(rgba(174, 213, 129, 1));
+          }
+        }
+      }
+    }
+    #search {
+      position: relative;
+      width: 32%;
+      margin: 20px auto 5px;
+      input {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid rgb(126, 87, 194);
+        outline-color: rgb(81, 45, 168);
+        border-radius: 7px;
+      }
+      img {
+        position: absolute;
+        right: 12px;
+        font-size: 22px;
+        top: 7px;
+        height: 1em;
+        width: 1em;
+      }
+      @media only screen and (max-width: 1400px) {
+        width: 42%;
+      }
+      @media only screen and (max-width: 1100px) {
+        width: 52%;
+      }
+      @media only screen and (max-width: 850px) {
+        width: 72%;
+      }
+      @media only screen and (max-width: 600px) {
+        width: 90%;
+      }
+    }
+    #cards {
+      width: 70%;
+      height: fit-content;
+      margin: 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      @media screen and (max-width: 1400px) {
+        width: 75%;
+      }
+      @media screen and (max-width: 1100px) {
+        width: 80%;
+      }
+      @media screen and (max-width: 850px) {
+        width: 85%;
+      }
+      @media screen and (max-width: 600px) {
+        width: 90%;
+      }
+      .card {
+        width: 300px;
+        height: 350px;
+        display: inline-block;
+        border-radius: 15px;
+        border: 2px dashed rgb(240, 98, 146);
+        margin: 20px 20px 10px;
+
+        @media only screen and (max-width: 850px) {
+          width: 280px;
+          height: 320px;
+          margin: 15px;
+        }
+        @media only screen and (max-width: 600px) {
+          width: 260px;
+          height: 300px;
+          margin: 10px;
+        }
+        @media only screen and (max-width: 400px) {
+          width: 240px;
+          height: 280px;
+          margin: 10px 0px;
+        }
+        div {
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          background-color: rgba(240, 98, 146, 0.4);
+          text-align: left;
+          padding: 10px;
+          position: relative;
+          h4 {
+            @media only screen and (max-width: 850px) {
+              font-size: 15px;
+            }
+            @media only screen and (max-width: 600px) {
+              font-size: 14px;
+            }
+            @media only screen and (max-width: 400px) {
+              font-size: 13px;
+            }
+          }
+          img {
+            cursor: pointer;
+            font-size: 20px;
+            position: absolute;
+            right: 10px;
+            top: 11px;
+            width: 20px;
+            height: 20px;
+          }
+        }
+        p {
+          padding: 10px;
+          height: 76%;
+          overflow: auto;
+          font-size: 14px;
+
+          @media only screen and (max-width: 850px) {
+            font-size: 13px;
+          }
+
+          @media only screen and (max-width: 600px) {
+            font-size: 12px;
+          }
+          @media only screen and (max-width: 400px) {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    width: 100%;
+    background-color: rgb(216, 181, 228);
+    padding: 5px 0px 50px;
+    margin-top: auto;
+    .links {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 40px;
+      text-align: center;
+      @media screen and (max-width: 1400px) {
+        width: 60%;
+      }
+      @media screen and (max-width: 1100px) {
+        width: 70%;
+        margin-top: 30px;
+      }
+      @media screen and (max-width: 800px) {
+        width: 80%;
+        margin-top: 20px;
+      }
+      @media screen and (max-width: 600px) {
+        width: 90%;
+        margin-top: 15px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        img {
+          background-color: #fff;
+          border-radius: 50%;
+          box-shadow: 0 2px 4px 0 hsla(0, 0%, 100%, 0.82), 0 2px 16px 0 #fff;
+          color: rgba(0, 0, 0, 0.8);
+          font-size: 40px;
+          margin: 10px;
+          padding: 5px;
+          transition: 0.2s color, box-shadow 1s;
+          height: 1em;
+          width: 1em;
+          box-sizing: initial;
+          @media only screen and (max-width: 800px) {
+            margin: 5px;
+          }
+          @media only screen and (max-width: 600px) {
+            font-size: 35px;
+            margin: 4px;
+          }
+          @media only screen and (max-width: 400px) {
+            font-size: 32px;
+            margin: 3px;
+          }
+          &:hover {
+            opacity: 1;
+            box-shadow: hsla(0, 0%, 100%, 0.82) 0px 22px 70px 4px;
+          }
+        }
+      }
+    }
+    .signature {
+      a {
+        display: block;
+        font-size: 1.4rem;
+        margin-top: 15px;
+        color: rgba(0, 0, 0, 0.4);
+        text-decoration: none;
+        transition: all 0.2s ease 0s;
+        padding: 5px;
+        text-align: center;
+        @media screen and (max-width: 800px) {
+          margin-top: 10px;
+          font-size: 1.3rem;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 1.1rem;
+        }
+        span {
+          font-size: 1rem;
+        }
       }
     }
   }

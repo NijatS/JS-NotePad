@@ -7,105 +7,113 @@
 body {
   font-family: Roboto Mono, monospace;
   background-color: #ede7f6;
+  height: 100vh;
 }
 
-#main {
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.root #main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#main h2 {
+.root #main h2 {
   font-size: 1.5em;
   margin: 20px 0;
   font-weight: bold;
 }
-#main h2 span {
+.root #main h2 span {
   color: rgb(126, 87, 194);
 }
-#main input {
+.root #main input {
   box-sizing: initial;
   width: 30%;
   padding: 10px;
+  resize: none;
   border: 1px solid rgb(126, 87, 194);
   outline-color: rgb(81, 45, 168);
   border-radius: 7px;
 }
 @media screen and (max-width: 1400px) {
-  #main input {
+  .root #main input {
     width: 40%;
   }
 }
 @media screen and (max-width: 1100px) {
-  #main input {
+  .root #main input {
     width: 50%;
   }
 }
 @media screen and (max-width: 850px) {
-  #main input {
+  .root #main input {
     width: 70%;
   }
 }
 @media screen and (max-width: 600px) {
-  #main input {
+  .root #main input {
     width: 90%;
   }
 }
-#main textarea {
+.root #main textarea {
   margin-top: 25px;
   box-sizing: initial;
   width: 30%;
   padding: 10px;
+  resize: none;
   border: 1px solid rgb(126, 87, 194);
   outline-color: rgb(81, 45, 168);
   border-radius: 7px;
 }
 @media screen and (max-width: 1400px) {
-  #main textarea {
+  .root #main textarea {
     width: 40%;
   }
 }
 @media screen and (max-width: 1100px) {
-  #main textarea {
+  .root #main textarea {
     width: 50%;
   }
 }
 @media screen and (max-width: 850px) {
-  #main textarea {
+  .root #main textarea {
     width: 70%;
   }
 }
 @media screen and (max-width: 600px) {
-  #main textarea {
+  .root #main textarea {
     width: 90%;
   }
 }
-#main .selectcolor {
+.root #main .selectcolor {
   width: 30%;
   margin: 10px auto;
   display: flex;
   justify-content: space-between;
 }
 @media screen and (max-width: 1400px) {
-  #main .selectcolor {
+  .root #main .selectcolor {
     width: 40%;
   }
 }
 @media screen and (max-width: 1100px) {
-  #main .selectcolor {
+  .root #main .selectcolor {
     width: 50%;
   }
 }
 @media screen and (max-width: 850px) {
-  #main .selectcolor {
+  .root #main .selectcolor {
     width: 70%;
   }
 }
 @media screen and (max-width: 600px) {
-  #main .selectcolor {
+  .root #main .selectcolor {
     width: 90%;
   }
 }
-#main .selectcolor button {
+.root #main .selectcolor button {
   padding: 10px 15px;
   background-color: rgb(126, 87, 194);
   border-radius: 10px;
@@ -117,13 +125,13 @@ body {
   cursor: pointer;
   box-sizing: border-box;
 }
-#main .selectcolor button:hover {
+.root #main .selectcolor button:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 20px 5px, rgba(0, 0, 0, 0.3) 0px 5px 10px 2px;
 }
-#main .selectcolor #colors {
+.root #main .selectcolor #colors {
   display: flex;
 }
-#main .selectcolor #colors .color:first-child {
+.root #main .selectcolor #colors .color:first-child {
   box-sizing: initial;
   width: 40px;
   height: 40px;
@@ -136,22 +144,22 @@ body {
   justify-content: center;
   background-color: rgb(240, 98, 146);
 }
-#main .selectcolor #colors .color:first-child > span {
+.root #main .selectcolor #colors .color:first-child > span {
   display: none;
 }
-#main .selectcolor #colors .color:first-child:hover {
+.root #main .selectcolor #colors .color:first-child:hover {
   opacity: 0.8;
   transform: translateY(-1px);
 }
 @media only screen and (max-width: 500px) {
-  #main .selectcolor #colors .color:first-child {
+  .root #main .selectcolor #colors .color:first-child {
     width: 30px;
     height: 30px;
     margin-right: 10px;
     transform: translateY(3px);
   }
 }
-#main .selectcolor #colors .color:nth-child(2) {
+.root #main .selectcolor #colors .color:nth-child(2) {
   box-sizing: initial;
   width: 40px;
   height: 40px;
@@ -164,22 +172,22 @@ body {
   justify-content: center;
   background-color: rgb(186, 104, 200);
 }
-#main .selectcolor #colors .color:nth-child(2) > span {
+.root #main .selectcolor #colors .color:nth-child(2) > span {
   display: none;
 }
-#main .selectcolor #colors .color:nth-child(2):hover {
+.root #main .selectcolor #colors .color:nth-child(2):hover {
   opacity: 0.8;
   transform: translateY(-1px);
 }
 @media only screen and (max-width: 500px) {
-  #main .selectcolor #colors .color:nth-child(2) {
+  .root #main .selectcolor #colors .color:nth-child(2) {
     width: 30px;
     height: 30px;
     margin-right: 10px;
     transform: translateY(3px);
   }
 }
-#main .selectcolor #colors .color:nth-child(3) {
+.root #main .selectcolor #colors .color:nth-child(3) {
   box-sizing: initial;
   width: 40px;
   height: 40px;
@@ -192,22 +200,22 @@ body {
   justify-content: center;
   background-color: rgb(79, 195, 247);
 }
-#main .selectcolor #colors .color:nth-child(3) > span {
+.root #main .selectcolor #colors .color:nth-child(3) > span {
   display: none;
 }
-#main .selectcolor #colors .color:nth-child(3):hover {
+.root #main .selectcolor #colors .color:nth-child(3):hover {
   opacity: 0.8;
   transform: translateY(-1px);
 }
 @media only screen and (max-width: 500px) {
-  #main .selectcolor #colors .color:nth-child(3) {
+  .root #main .selectcolor #colors .color:nth-child(3) {
     width: 30px;
     height: 30px;
     margin-right: 10px;
     transform: translateY(3px);
   }
 }
-#main .selectcolor #colors .color:nth-child(4) {
+.root #main .selectcolor #colors .color:nth-child(4) {
   box-sizing: initial;
   width: 40px;
   height: 40px;
@@ -220,22 +228,22 @@ body {
   justify-content: center;
   background-color: rgb(255, 213, 79);
 }
-#main .selectcolor #colors .color:nth-child(4) > span {
+.root #main .selectcolor #colors .color:nth-child(4) > span {
   display: none;
 }
-#main .selectcolor #colors .color:nth-child(4):hover {
+.root #main .selectcolor #colors .color:nth-child(4):hover {
   opacity: 0.8;
   transform: translateY(-1px);
 }
 @media only screen and (max-width: 500px) {
-  #main .selectcolor #colors .color:nth-child(4) {
+  .root #main .selectcolor #colors .color:nth-child(4) {
     width: 30px;
     height: 30px;
     margin-right: 10px;
     transform: translateY(3px);
   }
 }
-#main .selectcolor #colors .color:last-child {
+.root #main .selectcolor #colors .color:last-child {
   box-sizing: initial;
   width: 40px;
   height: 40px;
@@ -248,27 +256,27 @@ body {
   justify-content: center;
   background-color: rgb(174, 213, 129);
 }
-#main .selectcolor #colors .color:last-child > span {
+.root #main .selectcolor #colors .color:last-child > span {
   display: none;
 }
-#main .selectcolor #colors .color:last-child:hover {
+.root #main .selectcolor #colors .color:last-child:hover {
   opacity: 0.8;
   transform: translateY(-1px);
 }
 @media only screen and (max-width: 500px) {
-  #main .selectcolor #colors .color:last-child {
+  .root #main .selectcolor #colors .color:last-child {
     width: 30px;
     height: 30px;
     margin-right: 10px;
     transform: translateY(3px);
   }
 }
-#main #search {
+.root #main #search {
   position: relative;
   width: 32%;
   margin: 20px auto 5px;
 }
-#main #search input {
+.root #main #search input {
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
@@ -276,7 +284,7 @@ body {
   outline-color: rgb(81, 45, 168);
   border-radius: 7px;
 }
-#main #search img {
+.root #main #search img {
   position: absolute;
   right: 12px;
   font-size: 22px;
@@ -285,26 +293,26 @@ body {
   width: 1em;
 }
 @media only screen and (max-width: 1400px) {
-  #main #search {
+  .root #main #search {
     width: 42%;
   }
 }
 @media only screen and (max-width: 1100px) {
-  #main #search {
+  .root #main #search {
     width: 52%;
   }
 }
 @media only screen and (max-width: 850px) {
-  #main #search {
+  .root #main #search {
     width: 72%;
   }
 }
 @media only screen and (max-width: 600px) {
-  #main #search {
+  .root #main #search {
     width: 90%;
   }
 }
-#main #cards {
+.root #main #cards {
   width: 70%;
   height: -moz-fit-content;
   height: fit-content;
@@ -314,26 +322,26 @@ body {
   justify-content: center;
 }
 @media screen and (max-width: 1400px) {
-  #main #cards {
+  .root #main #cards {
     width: 75%;
   }
 }
 @media screen and (max-width: 1100px) {
-  #main #cards {
+  .root #main #cards {
     width: 80%;
   }
 }
 @media screen and (max-width: 850px) {
-  #main #cards {
+  .root #main #cards {
     width: 85%;
   }
 }
 @media screen and (max-width: 600px) {
-  #main #cards {
+  .root #main #cards {
     width: 90%;
   }
 }
-#main #cards .card {
+.root #main #cards .card {
   width: 300px;
   height: 350px;
   display: inline-block;
@@ -341,7 +349,28 @@ body {
   border: 2px dashed rgb(240, 98, 146);
   margin: 20px 20px 10px;
 }
-#main #cards .card div {
+@media only screen and (max-width: 850px) {
+  .root #main #cards .card {
+    width: 280px;
+    height: 320px;
+    margin: 15px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .root #main #cards .card {
+    width: 260px;
+    height: 300px;
+    margin: 10px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .root #main #cards .card {
+    width: 240px;
+    height: 280px;
+    margin: 10px 0px;
+  }
+}
+.root #main #cards .card div {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-color: rgba(240, 98, 146, 0.4);
@@ -349,7 +378,22 @@ body {
   padding: 10px;
   position: relative;
 }
-#main #cards .card div img {
+@media only screen and (max-width: 850px) {
+  .root #main #cards .card div h4 {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .root #main #cards .card div h4 {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .root #main #cards .card div h4 {
+    font-size: 13px;
+  }
+}
+.root #main #cards .card div img {
   cursor: pointer;
   font-size: 20px;
   position: absolute;
@@ -358,20 +402,34 @@ body {
   width: 20px;
   height: 20px;
 }
-#main #cards .card p {
+.root #main #cards .card p {
   padding: 10px;
   height: 76%;
   overflow: auto;
   font-size: 14px;
 }
-
-footer {
+@media only screen and (max-width: 850px) {
+  .root #main #cards .card p {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .root #main #cards .card p {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .root #main #cards .card p {
+    font-size: 11px;
+  }
+}
+.root footer {
   width: 100%;
   background-color: rgb(216, 181, 228);
   padding: 5px 0px 50px;
   margin-top: auto;
 }
-footer .links {
+.root footer .links {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
@@ -379,33 +437,33 @@ footer .links {
   text-align: center;
 }
 @media screen and (max-width: 1400px) {
-  footer .links {
+  .root footer .links {
     width: 60%;
   }
 }
 @media screen and (max-width: 1100px) {
-  footer .links {
+  .root footer .links {
     width: 70%;
     margin-top: 30px;
   }
 }
 @media screen and (max-width: 800px) {
-  footer .links {
+  .root footer .links {
     width: 80%;
     margin-top: 20px;
   }
 }
 @media screen and (max-width: 600px) {
-  footer .links {
+  .root footer .links {
     width: 90%;
     margin-top: 15px;
   }
 }
-footer .links a {
+.root footer .links a {
   text-decoration: none;
   color: black;
 }
-footer .links a img {
+.root footer .links a img {
   background-color: #fff;
   border-radius: 50%;
   box-shadow: 0 2px 4px 0 hsla(0, 0%, 100%, 0.82), 0 2px 16px 0 #fff;
@@ -419,27 +477,27 @@ footer .links a img {
   box-sizing: initial;
 }
 @media only screen and (max-width: 800px) {
-  footer .links a img {
+  .root footer .links a img {
     margin: 5px;
   }
 }
 @media only screen and (max-width: 600px) {
-  footer .links a img {
+  .root footer .links a img {
     font-size: 35px;
     margin: 4px;
   }
 }
 @media only screen and (max-width: 400px) {
-  footer .links a img {
+  .root footer .links a img {
     font-size: 32px;
     margin: 3px;
   }
 }
-footer .links a img:hover {
+.root footer .links a img:hover {
   opacity: 1;
   box-shadow: hsla(0, 0%, 100%, 0.82) 0px 22px 70px 4px;
 }
-footer .signature a {
+.root footer .signature a {
   display: block;
   font-size: 1.4rem;
   margin-top: 15px;
@@ -450,16 +508,16 @@ footer .signature a {
   text-align: center;
 }
 @media screen and (max-width: 800px) {
-  footer .signature a {
+  .root footer .signature a {
     margin-top: 10px;
     font-size: 1.3rem;
   }
 }
 @media screen and (max-width: 600px) {
-  footer .signature a {
+  .root footer .signature a {
     font-size: 1.1rem;
   }
 }
-footer .signature a span {
+.root footer .signature a span {
   font-size: 1rem;
 }
