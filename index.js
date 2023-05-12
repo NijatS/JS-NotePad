@@ -21,36 +21,17 @@ let selectedColor;
 let color = [redColor, purpleColor, blueColor, yellowColor, greenColor];
 let cardsArray = [defaultCard];
 
-redColor.addEventListener("click", () => {
-  Blur(color);
-  Click(redColor);
-  style = getComputedStyle(redColor);
-  selectedColor = style.backgroundColor;
-});
-purpleColor.addEventListener("click", () => {
-  Blur(color);
-  Click(purpleColor);
-  style = getComputedStyle(purpleColor);
-  selectedColor = style.backgroundColor;
-});
-blueColor.addEventListener("click", () => {
-  Blur(color);
-  Click(blueColor);
-  style = getComputedStyle(blueColor);
-  selectedColor = style.backgroundColor;
-});
-yellowColor.addEventListener("click", () => {
-  Blur(color);
-  Click(yellowColor);
-  style = getComputedStyle(yellowColor);
-  selectedColor = style.backgroundColor;
-});
-greenColor.addEventListener("click", () => {
-  Blur(color);
-  Click(greenColor);
-  style = getComputedStyle(greenColor);
-  selectedColor = style.backgroundColor;
-});
+for (const c of color) {
+  c.addEventListener("click", () => {
+    Blur(color);
+    Click(c);
+    style = getComputedStyle(c);
+    selectedColor = style.backgroundColor;
+    divColor = selectedColor.substring(0, selectedColor.length - 1);
+    divColor += ",0.4)";
+  });
+}
+
 saveButton.addEventListener("click", () => {
   if (!titleInput.value.trim() || !noteInput.value.trim()) {
     alert("Please write note title");
@@ -73,10 +54,8 @@ saveButton.addEventListener("click", () => {
           </p>
   `;
   const cardDiv = newCard.getElementsByTagName("div")[0];
-  selectedColor.opacity = "0.4";
   newCard.style.borderColor = selectedColor;
-  cardDiv.style.backgroundColor = selectedColor;
-  cardDiv.style.backgroundColor.opacity = "0.4";
+  cardDiv.style.backgroundColor = divColor;
   newCard.className = "card";
   cards.append(newCard);
   cardsArray.push(newCard);
@@ -86,6 +65,9 @@ saveButton.addEventListener("click", () => {
   selectedColor = "";
   const trash = newCard.querySelector("img");
   trash.addEventListener("click", () => {
+    if (!confirm("Are you sure?")) {
+      return;
+    }
     let index = cardsArray.findIndex((card) => card == newCard);
     newCard.remove();
     cardsArray.splice(index, 1);
@@ -101,6 +83,9 @@ searchInput.addEventListener("keyup", () => {
 });
 
 defaultTrash.addEventListener("click", () => {
+  if (!confirm("Are you sure?")) {
+    return;
+  }
   defaultCard.remove();
   cardsArray.shift();
 });

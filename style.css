@@ -437,6 +437,7 @@ footer .links a img {
 }
 footer .links a img:hover {
   opacity: 1;
+  box-shadow: hsla(0, 0%, 100%, 0.82) 0px 22px 70px 4px;
 }
 footer .signature a {
   display: block;
