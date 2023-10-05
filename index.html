@@ -11,72 +11,82 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="./Image/n.jpg" />
+    <title>NotePad</title>
   </head>
   <body>
     <div class="root">
-    <div id="main">
-      <h2>Nijat <span>Note</span>Pad</h2>
-      <input
-        type="text"
-        id="titleInput"
-        maxlength="22"
-        placeholder="Note Title"
-      />
-      <textarea id="noteInput" rows="8" placeholder="Write note..."></textarea>
-      <div class="selectcolor">
-        <div id="colors">
-          <div class="color" id="red"></div>
-          <div class="color" id="purple"></div>
-          <div class="color" id="blue"></div>
-          <div class="color" id="yellow"></div>
-          <div class="color" id="green"></div>
-        </div>
-        <button id="save">Save ✓</button>
-      </div>
-      <div id="search">
-        <input type="text" id="searchInput" placeholder="Write to search.." />
-        <img src="./Image/search-icon.svg" alt="" />
-      </div>
-      <div id="cards">
-        <div class="card" id="default">
-          <div>
-            <h4>Add a title to your note</h4>
-            <img src="./Image/trash-icon.svg" alt="Trash Icon" />
+      <div id="main">
+        <h2>Nijat <span>Note</span>Pad</h2>
+        <input
+          type="text"
+          id="titleInput"
+          maxlength="22"
+          placeholder="Note Title"
+        />
+        <textarea
+          id="noteInput"
+          rows="8"
+          placeholder="Write note..."
+        ></textarea>
+        <div class="selectcolor">
+          <div id="colors">
+            <div class="color" id="red"></div>
+            <div class="color" id="purple"></div>
+            <div class="color" id="blue"></div>
+            <div class="color" id="yellow"></div>
+            <div class="color" id="green"></div>
           </div>
-          <p>
-            You can choose a color while adding notes. The notes you add will not be lost even if you refresh the page.
-          </p>
+          <button id="add">Add</button>
+          <button id="save">Save ✓</button>
+        </div>
+        <div id="search">
+          <input type="text" id="searchInput" placeholder="Write to search.." />
+          <img src="./Image/search-icon.svg" alt="" />
+        </div>
+        <div id="cards">
+          <div class="card" id="default">
+            <div>
+              <h4>Add a title to your note</h4>
+              <img src="./Image/edit-icon.svg" alt="Edit Icon" id="edit" />
+              <img src="./Image/trash-icon.svg" alt="Trash Icon" id="trash" />
+            </div>
+            <p>
+              You can choose a color while adding notes. The notes you add will
+              not be lost even if you refresh the page.
+            </p>
+          </div>
         </div>
       </div>
+      <footer>
+        <div class="links">
+          <a href="https://github.com/NijatS">
+            <img src="./Image/github.svg" alt="" />
+          </a>
+          <a href="https://www.linkedin.com/in/nijat-soltanov-023660235/">
+            <img src="./Image/linkedln.svg" alt="" />
+          </a>
+          <a
+            href="https://instagram.com/nijatsoltanov_?igshid=ZWIzMWE5ZmU3Zg=="
+          >
+            <img src="./Image/instagram.svg" alt="" />
+          </a>
+          <a href="https://www.facebook.com/nicat.soltanov.940/">
+            <img src="./Image/facebook.svg" alt="" />
+          </a>
+          <a href="#">
+            <img src="./Image/twitter.svg" alt="" />
+          </a>
+        </div>
+        <div class="signature">
+          <a href="https://notepadnijat.netlify.app/"
+            >Designed & Built by
+            <br />
+            <span>Nijat Soltanov</span>
+          </a>
+        </div>
+      </footer>
     </div>
-    <footer>
-      <div class="links">
-        <a href="https://github.com/NijatS">
-          <img src="./Image/github.svg" alt="" />
-        </a>
-        <a href="https://www.linkedin.com/in/nijat-soltanov-023660235/">
-          <img src="./Image/linkedln.svg" alt="" />
-        </a>
-        <a href="https://instagram.com/nijatsoltanov_?igshid=ZWIzMWE5ZmU3Zg==">
-          <img src="./Image/instagram.svg" alt="" />
-        </a>
-        <a href="https://www.facebook.com/nicat.soltanov.940/">
-          <img src="./Image/facebook.svg" alt="" />
-        </a>
-        <a href="#">
-          <img src="./Image/twitter.svg" alt="" />
-        </a>
-      </div>
-      <div class="signature">
-        <a href="https://notepadnijat.netlify.app/"
-          >Designed & Built by
-          <br />
-          <span>Nijat Soltanov</span>
-        </a>
-      </div>
-    </footer>
-  </div>
     <script src="./index.js"></script>
   </body>
 </html>
